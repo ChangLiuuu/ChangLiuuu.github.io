@@ -182,14 +182,14 @@ h5, h6          { font-weight: bolder }
         display: block;
         float: left;
         position: relative;
-        margin: 0 15px 15px 0;
+        margin: 0 20px 5px 0;
     }
 
 
     header ul.social li a{
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         background: url('../img/sm.png') no-repeat;
         background-position: 0 0;
     }
@@ -588,7 +588,6 @@ h5, h6          { font-weight: bolder }
 .content ul.archive-list li a:hover{
     color: #969595;
 }
-
 /*  Tooltip  */
 .tooltip{
     display: block;
