@@ -25,6 +25,14 @@
 
     img{
         max-width: 100%;
+        opacity: 0.2;
+        transition: 0.2s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+        transition: opacity 0.5s, transform 0.5s;
     }
 
     article,aside,details,figcaption,figure,
@@ -108,4 +116,10 @@
     .fa-linkedin-square {
         font-size: 120%;
         color: #0086b3;
+    }
+
+    /*  gallery  */
+    .title-contain {
+        background-color: #060606;
+        background: linear-gradient(90deg, rgba(6, 6, 6, 0.87), rgba(44, 44, 44, 0.99));
     }
