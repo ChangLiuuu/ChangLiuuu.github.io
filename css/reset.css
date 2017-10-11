@@ -23,16 +23,20 @@
         line-height:1;
     }
 
-    .work img{
+    .work a img{
         max-width: 100%;
         opacity: 0.2;
         transition: 0.2s;
     }
 
-    .work img:hover {
+    .work a img:hover {
         transform: scale(1.1);
         opacity: 0.8;
         transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .content img {
+
     }
 
     article,aside,details,figcaption,figure,
