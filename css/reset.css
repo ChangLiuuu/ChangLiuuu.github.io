@@ -25,7 +25,7 @@
 
     .work a img{
         max-width: 100%;
-        opacity: 0.2;
+        opacity: 0.8;
         transition: 0.2s;
     }
 
@@ -127,3 +127,4 @@
         background-color: #060606;
         background: linear-gradient(90deg, rgba(6, 6, 6, 0.87), rgba(44, 44, 44, 0.99));
     }
+
