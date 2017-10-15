@@ -524,8 +524,8 @@ h5, h6          { font-weight: bolder }
 
 .content p{
     color: #4b4848;
-    font-family: "raleway-regular", arial;
-    font-size: 15px;
+    font-family: Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    font-size: 17px;
     line-height: 24px;
     margin-bottom: 25px;
 }
