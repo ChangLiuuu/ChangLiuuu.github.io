@@ -141,12 +141,12 @@
 
             <!-- Content -->
             <h1 id="传统Web交互"><a href="#传统Web交互" class="headerlink" title="传统Web交互"></a>传统Web交互</h1><p>传统web交互是浏览器发送request，服务器收到request后把相应的信息（HTML界面信息等）返回给浏览器，呈现出来。比如：输入www.baidu.com后，发送get请求到百度服务器，百度服务器返回相应的界面给用户。这种交互叫<strong>同步交互</strong>, 并且期间处于<strong>阻塞状态</strong>。</p>
-<p>通俗讲，既“你一来，干等着我一回”。<strong>像是一小伙正在追一个姑娘，在嘈杂的宿舍发完微信，啥都不敢干了，手机不离手，盯着屏幕等着姑娘回信息。</strong>如同用户请求完，等着服务器返回信息，等待期间什么也没法干。再碰到网速慢，界面卡个白屏就慢慢等吧。</p>
+<p>通俗讲，既“你一来，干等着我一回”。像是一小伙正在追一个姑娘，在嘈杂的宿舍发完微信，啥都不敢干了，手机不离手，盯着屏幕等着姑娘回信息。如同用户请求完，等着服务器返回信息，等待期间什么也没法干。再碰到网速慢，界面卡个白屏就慢慢等吧。</p>
 <h1 id="Ajax的应用"><a href="#Ajax的应用" class="headerlink" title="Ajax的应用"></a>Ajax的应用</h1><blockquote>
 <p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。<br>AJAX 不是新的编程语言，而是一种使用现有标准的新方法。<br>AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下。</p>
 </blockquote>
 <p><br></p>
-<p>那么什么是：1. 异步，2. XML， 3.现有标准的新方法</p>
+<p><strong>那么什么是：1. 异步，2. XML， 3.现有标准的新方法</strong></p>
 <h2 id="1-异步"><a href="#1-异步" class="headerlink" title="1. 异步"></a>1. 异步</h2><p>异步交互颠覆传统web交互，就不是 “你一来，干等着女神回信息” 了。而是，<strong>发完微信后，让闲着没事的舍友帮忙看着手机屏幕，本人继续专心团战，吃零食，倒垃圾等。等女神回信息了，让舍友嗷一嗓，我再回过头来回微信。</strong>  既主线程是不阻塞的，代码继续执行，等请求有消息了，我再回过头处理，所以叫<strong>回调函数（callback function）</strong>。</p>
 <h2 id="2-XML"><a href="#2-XML" class="headerlink" title="2. XML"></a>2. XML</h2><p>先和熟悉的JSON对比：</p>
 <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1)概念"></a>1)概念</h3><p>·JSON</p>
@@ -165,7 +165,7 @@
 <h3 id="3-Ajax是现有标准的新方法"><a href="#3-Ajax是现有标准的新方法" class="headerlink" title="3)Ajax是现有标准的新方法"></a>3)Ajax是现有标准的新方法</h3><p>为什么来这么一句呢。。因为Ajax确实不是什么新技术，因为Ajax核心是创建 XMLHttpRequest对象，而这个对象很早就被<strong>微软</strong>设计了，但流行起来是由<strong>Google</strong>带动的。google map 和 google suggest。google map 远近拉动地图，但map并不会不停刷新，而是很流畅的感觉，虽然各个餐厅或者道路会慢慢加载，但没有中断用户体验。 google suggest就是搜索引擎的下拉窗口的提示字，动态变化。</p>
 <p>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Ajax是基于现有的Internet标准，并且联合使用：</div><div class="line"></div><div class="line">1. XMLHttpRequest 对象 (异步的与服务器交换数据) </div><div class="line">2. 2JavaScript/DOM (信息显示/交互) </div><div class="line">3. CSS (给数据定义样式) </div><div class="line">4. XML (作为转换数据的格式) 图片描述</div><div class="line"></div><div class="line">所以说Ajax是利用现有标准的组合，形成的新标准和新方法。</div></pre></td></tr></table></figure>
-<p>回过头来对应说下 <strong>“追女神和舍友帮忙” </strong>的问题。</p>
+<p>回过头来对应说下 “追女神和舍友帮忙” 的问题。</p>
 <p><strong>我叫来舍友，相当于 1. 创建XMLHttpRequest对象，这个对象和服务器先交互着，我先忙我的。等手机有消息了，根据消息 我来做出反应  2. 用返回的消息来用JS操作本地的DOM 以及 3. 变化相应CSS 或 4. 或是把 MXL格式的文件信息展示到页面上。</strong></p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ol>
 <li>wc3标准 <a href="https://www.w3.org/TR/XMLHttpRequest/" target="_blank" rel="external">https://www.w3.org/TR/XMLHttpRequest/</a> </li>
