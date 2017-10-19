@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="圣杯布局圣杯布局，两边固定宽度，中间自适应。
+ 
+步骤1) 设置header, contain 和 footer的宽高，并且contain中的mid,left和right设置左浮动(float: left)。HTML, CSS如下：
+
+
+
+效果和你想得一样对吧，两个块元素溢出来了。
+注意，conta">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="刘畅">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="3. CSS圣杯布局和双飞翼布局"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="塔不倒，人不退"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>3. CSS圣杯布局和双飞翼布局 - 塔不倒，人不退</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header class="header-background">
+    <div class="logo">
+        <a href="/">塔不倒，人不退</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/tags">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about">About</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class=" social clearfix">
+
+            <li><a href="https://github.com/ChangLiuuu" target="_blank"><i
+                            class="fa fa-github"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/changliu6/" target="_blank"><i
+                            class="fa fa-linkedin-square"></i></a></li>
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>计算机小硕未毕业, dota爱好者.<br>希望成为一名有趣的工程师.</p>
+            <br><p>Author <strong>刘畅</strong><br>
+            <p>cliuscu92@gmail.com</p>
+        </div><!-- end rights -->
+    </div><!-- end footer -->
+</header><!-- end header -->
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/img/assets/b0.png');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2017/10/14/2-ajax/" class="next" data-title="2. Ajax原理"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">3. CSS圣杯布局和双飞翼布局</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <h1 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h1><p>圣杯布局，两边固定宽度，中间自适应。</p>
+<p><img src="step-0-0.png" alt=""> <img src="step-3-1.png" alt=""></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1) 设置header, contain 和 footer的宽高，并且contain中的mid,left和right设置左浮动(float: left)。HTML, CSS如下：</p>
+<p><img src="step-1-0.png" alt="html"></p>
+<p><img src="step-1-1.png" alt="css"></p>
+<p><img src="step-1-2.png" alt="效果"></p>
+<p>效果和你想得一样对吧，两个块元素溢出来了。</p>
+<p>注意，contain的宽度并没有设置100%，而是默认的inherit，这点之后会提到为什么。①</p>
+<p>W3C盒子模型的 width 是 content-width，而ie盒子模型包括了padding和border的宽度。</p>
+<p>2) 接下来，把.left和.right移上去。</p>
+<p>.left 添加 margin-left : -100%； </p>
+<p>100% 为父类contain的content-width，既左边距向左移动contain的距离。</p>
+<p>.right 添加 margin-left : -200px; </p>
+<p>200px为 .right的宽度，既左边距向左移动了本身的宽度。</p>
+<p>效果：</p>
+<p><img src="step-2-0.png" alt=""></p>
+<p>3）看到 .left和.right覆盖了mid的内容，接下来先.contain添加padding, 在将.left .right 做相对移动：</p>
+<p>首先，mid 添加padding : 0 200px 0 150px;       // 200px为.right宽度，150px为.left宽度</p>
+<p>效果：</p>
+<p><img src="step-3-0.png" alt=""></p>
+<p>其次，添加 .left 和 .right 相对移动。 </p>
+<p>.left {</p>
+<p>​    position : relative;</p>
+<p>​    left : -150px;</p>
+<p>}</p>
+<p>.right {</p>
+<p>​    position : relative;</p>
+<p>​    right : -200px;</p>
+<p>}</p>
+<p>效果： </p>
+<p><img src="step-3-1.png" alt=""></p>
+<p>4)最后别忘了设置 body的min-width: 150 + 150 + 200 = 500 px。</p>
+<p>.mid最小宽度是 .left的宽度。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>1 .为什么设置mid 为什么最少宽度是150px((既.left的宽度)呢？ </p>
+<p>因为当 .mid宽度小于150px(既.left的宽度)，也就是.contain的内容宽度小于150px了（因为 mid宽度设置的100%, 就是父类的content宽度。这时 .left 的 margin-left : -100% 是基于.contain的100%内容宽度（小于150px），margin-left 左移都没有150px，当然移不上去，就变型了。</p>
+<p>2  回到标注 ①   .contain的宽度为什么不设置100%?   </p>
+<p><strong>100%宽度指的是继承父类content宽度的100%</strong>，不是加padding的，如果.contain宽度设置了100%，而.mid也设置了100%, 实际相当于.mid宽度固定，不能自适应，因为.contain的父类就是body了，100%body的内容宽度固定，减去左右padding 150px ，200px，.contain的整个内容宽度是固定的，而.mid又100%继承了.contain的内容宽度，也是固定的，不是自适应的。而不设置的话100%，触发BFC机制（研究中）.mid的宽度会随着.contain的变化自适应。 </p>
+<h1 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h1><p>差别在于 第<strong>3)</strong>步 contain内容被覆盖了，除了使用外围的padding，还可以考虑使用margin。</p>
+<p>给contain增加一个内层div—  contain-inner, 然后margin:0 200px 0 150px。解决了margin-left移不上去，body最小宽度的问题。</p>
+<p>代码如下： <img src="step-4-1.png" alt=""></p>
+<p>效果：<img src="step-4-0.png" alt=""></p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>我就特别不理解，圣杯布局为了什么非要先margin-left : -100%, 然后再 left : -150px呢  导致了最小宽度问题。抖个小机灵，我就调整了下，margin-left : -150px， float ： -100%，这样就解决了 margin-left 移不上去的问题了，果然成功了，怎么缩小，都是那么完美…  就叫它圣杯布局2.0版吧。双飞翼布局加一层div，感觉不太优雅。</p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/前端/">前端</a> <a href="/tags/CSS/">CSS</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
